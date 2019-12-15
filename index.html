@@ -14,34 +14,40 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
       <nav>
-        <div class="logo">
-          <img src="./images/AA.svg" alt="AAngel.io" />
-        </div>
-        <div class="nav-bar">
-          <ul>
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">About</a>
-            </li>
-            <li>
-              <a href="#">Projects</a>
-            </li>
-            <li>
-              <a href="#">Contact</a>
-            </li>
-          </ul>
-        </div>
-        <div class="social-icon">
-          <a href="#"><i class="fab fa-github"></i></a>
-        </div>
-        <div class="menu">
-          <button><i class="fas fa-bars"></i></button>
+        <div class="container nav-elements">
+          <div class="logo">
+            <a href="#"><img src="./images/AA.svg" alt="AAngel.io"/></a>
+          </div>
+          <div class="nav-bar">
+            <ul>
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Projects</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="social-icon">
+            <a href="#"><i class="fab fa-github"></i></a>
+          </div>
+          <div class="menu">
+            <button><i class="fas fa-bars"></i></button>
+          </div>
         </div>
       </nav>
     </header>
@@ -49,68 +55,72 @@
     <main>
       <div class="main">
         <div class="banner">
-          <h1>Hi, my name is Angel Atencio. I'm a junior developer.</h1>
-          <button>check out my projects</button>
+          <div class="container">
+            <h1>
+              Hi, my name is <span class="highlight">Angel Atencio</span>.<br />
+              I'm a junior developer.
+            </h1>
+            <a href="#" class="btn">check out my projects</a>
+          </div>
         </div>
-
-        <div class="about">
-          <h2>About</h2>
-          <div class="row">
-            <div class="col">
-              <div class="my-image">
-                <img src="./images/Angels picture.png" alt="Angel Atencio" />
+        <div class="container">
+          <div class="about">
+            <h2>About</h2>
+            <div class="row">
+              <div class="col">
+                <div class="my-image"></div>
+                <div class="description">
+                  <h3>Who am I?</h3>
+                  <p>
+                    I am an aspire developer based in Newark, NJ. My school is
+                    Technology Highschool, and I'm in my senior year of class
+                    2020. I love constructing websites and video games, but I
+                    also love spending time playing games too.
+                  </p>
+                  <a href="https://github.com/AngelAtencio" target="_blank">
+                    https://github.com/AngelAtencio
+                  </a>
+                </div>
               </div>
-              <div class="description">
-                <h3>Who am I?</h3>
-                <p>
-                  I am an aspire developer based in Newark, NJ. My school is
-                  Technology Highschool, and I'm in my senior year of class
-                  2020. I love constructing websites and video games, but I also
-                  love spending time playing games too.
-                </p>
-                <a href="https://github.com/AngelAtencio" target="_blank">
-                  https://github.com/AngelAtencio
-                </a>
-              </div>
-            </div>
 
-            <div class="col">
-              <h3>What I know</h3>
-              <div class="programming-icons">
-                <div class="html generic-icon">
-                  <img src="./images/html.png" alt="Html" />
-                  <p>HTML</p>
-                </div>
-                <div class="css generic-icon">
-                  <img src="./images/CSS.png" alt="Css" />
-                  <p>CSS</p>
-                </div>
-                <div class="javascript generic-icon">
-                  <img src="./images/js.png" alt="Javascript" />
-                  <p>Javascript</p>
-                </div>
-                <div class="python generic-icon">
-                  <img src="./images/Python.png" alt="Python" />
-                  <p>Python</p>
-                </div>
-                <div class="c# generic-icon">
-                  <img src="./images/C.png" alt="C#" />
-                  <p>C#</p>
+              <div class="col">
+                <h3>What I know</h3>
+                <div class="programming-icons">
+                  <div class="html generic-icon">
+                    <img src="./images/html.png" alt="Html" />
+                    <p>HTML</p>
+                  </div>
+                  <div class="css generic-icon">
+                    <img src="./images/CSS.png" alt="Css" />
+                    <p>CSS</p>
+                  </div>
+                  <div class="javascript generic-icon">
+                    <img src="./images/js.png" alt="Javascript" />
+                    <p>Javascript</p>
+                  </div>
+                  <div class="python generic-icon">
+                    <img src="./images/Python.png" alt="Python" />
+                    <p>Python</p>
+                  </div>
+                  <div class="c# generic-icon">
+                    <img src="./images/C.png" alt="C#" />
+                    <p>C#</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <!--  End about -->
-        <div class="projects">
-          <h3>Projects</h3>
-        </div>
-        <div class="contact">
-          <h3>Contact</h3>
-          <p>Feel free to reach me at the address listed below.</p>
-          <a href="mailto:atencioangel6648@gmail.com" class="contact-link">
-            atencioangel6648@gmail.com
-          </a>
+          <!--  End about -->
+          <div class="projects">
+            <h2>Projects</h2>
+          </div>
+          <div class="contact">
+            <h2>Contact</h2>
+            <p>Feel free to reach me at the address listed below.</p>
+            <a href="mailto:atencioangel6648@gmail.com" class="contact-link">
+              atencioangel6648@gmail.com
+            </a>
+          </div>
         </div>
       </div>
       <!--  End main  -->
@@ -118,7 +128,9 @@
         <div class="footer">
           <img src="./images/AA.svg" alt="AA logo" />
           <a href="#">AAtencio.io</a>
-          <span><i class="fab fa-github"></i></span>
+          <a href="https://github.com/AngelAtencio"
+            ><i class="fab fa-github"></i
+          ></a>
           <p>&#169;AAtencio.io 2020</p>
         </div>
       </footer>
