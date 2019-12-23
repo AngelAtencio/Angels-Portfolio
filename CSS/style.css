@@ -6,6 +6,7 @@
 :root {
   --blue: #2d76d6;
   --midnightBlue: #171a2e;
+  --light-grey: #d4d4d4;
 }
 
 html,
@@ -41,6 +42,17 @@ nav {
   margin: auto;
   padding-right: 1em;
   padding-left: 1em;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.row .col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 /*Elements for nav*/
@@ -119,32 +131,73 @@ header {
 }
 
 .btn {
-  color: white;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  padding: 1.5em 2em;
+  display: inline-block;
+  margin: 15px 30px;
   text-transform: uppercase;
-  text-decoration: none;
-  border: 1px solid var(--blue);
-  padding: 16px 18px;
-  transition: background-color 0.3s ease-out;
-  margin-top: 4em;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
 }
-.btn:hover {
-  background-color: var(--blue);
+.btn:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.btn-1 {
+  border: 2px solid #fff;
+  color: #fff;
+}
+/* Button 1e */
+.btn-1e {
+  overflow: hidden;
+}
+
+.btn-1e:after {
+  width: 100%;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  opacity: 0;
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+
+.btn-1e:hover,
+.btn-1e:active {
+  color: var(--blue);
+}
+
+.btn-1e:hover:after {
+  height: 260%;
+  opacity: 1;
+}
+
+.btn-1e:active:after {
+  height: 400%;
+  opacity: 1;
 }
 /*About section*/
 .about {
   margin: 2em 0;
 }
-.about .row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-.about .row .col {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
+
 .my-image {
   max-width: 340px;
   min-height: 340px;
@@ -163,11 +216,13 @@ header {
 h3.sub-class {
   color: var(--blue);
   text-align: center;
+  margin-bottom: 0.5em;
+}
+.description p {
+  margin-bottom: 1em;
 }
 .description a {
   color: var(--blue);
-  padding-top: 1em;
-  display: block;
 }
 .about h2 {
   color: var(--blue);
@@ -191,6 +246,7 @@ h3.sub-class {
 /*Projects styles*/
 .projects {
   background-color: #f1f5fc;
+  padding-bottom: 2em;
 }
 .projects h2 {
   text-align: center;
@@ -198,25 +254,57 @@ h3.sub-class {
   margin-bottom: 1em;
   padding-top: 1em;
 }
+.card {
+  background-color: white;
+  margin: 1em;
+  border: 1px solid var(--light-grey);
+}
+.card .card-img {
+  background-image: url(http://via.placeholder.com/280);
+  min-height: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.card .card-description {
+  padding: 1em;
+}
+.card .card-description h4 {
+  color: var(--midnightBlue);
+  margin-bottom: 1em;
+}
+.card .card-description p {
+  margin-bottom: 1em;
+}
+.card .card-description .demo-link {
+  text-align: right;
+}
+.card .card-description .demo-link a {
+  color: var(--blue);
+  text-decoration: none;
+}
 /*Contact styles*/
 .contact {
   text-align: center;
+  padding: 2em 0;
 }
 .contact h2 {
   color: var(--blue);
   margin-bottom: 1em;
 }
+.contact p {
+  margin-bottom: 2em;
+}
 .contact-link {
   color: var(--blue);
   font-size: 2em;
   padding-top: 1em;
-  display: block;
 }
 /*Footer styles*/
 .footer {
   text-align: center;
   background-color: var(--midnightBlue);
-  padding: 1.5em;
+  padding: 4em 0;
   margin-top: 2em;
 }
 .footer .container {
