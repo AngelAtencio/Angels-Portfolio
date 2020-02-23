@@ -261,11 +261,16 @@ h3.sub-class {
   border: 1px solid var(--light-grey);
 }
 .card .card-img {
-  background-image: url(http://via.placeholder.com/280);
-  min-height: 200px;
+  min-height: 300px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+.dice-img {
+  background-image: url("../images/pig-game.png");
+}
+.hyperflux-img {
+  background-image: url("../images/hyperflux-game.png");
 }
 .card .card-description {
   padding: 1em;
