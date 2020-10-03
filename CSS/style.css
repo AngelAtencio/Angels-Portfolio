@@ -272,7 +272,10 @@ h3.sub-class {
 .hyperflux-img {
   background-image: url("../images/hyperflux-game.png");
 }
-.card .card-description {
+.huluclone-img {
+  background-image: url("../images/huluclone.png");
+}
+.card > .card-description {
   padding: 1em;
 }
 .card .card-description h4 {
